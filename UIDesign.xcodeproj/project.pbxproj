@@ -21,6 +21,7 @@
 		7995B1A4276A182A0018108C /* SignupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7995B1A3276A182A0018108C /* SignupTableViewController.swift */; };
 		7995B1A6276A1F680018108C /* ForgotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7995B1A5276A1F680018108C /* ForgotTableViewController.swift */; };
 		79C743BA276B731600492727 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C743B9276B731600492727 /* TableCell.swift */; };
+		79C743BC276B846E00492727 /* CustomField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C743BB276B846E00492727 /* CustomField.swift */; };
 		8E0C34D6D25DF3707FC4EA7F /* Pods_UIDesign_UIDesignUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12C77EDFB869E4CBDBE69B8 /* Pods_UIDesign_UIDesignUITests.framework */; };
 		BA2FD67E5D705B0769A960C2 /* Pods_UIDesign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408A1DEEAB19200C388CFF85 /* Pods_UIDesign.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		7995B1A3276A182A0018108C /* SignupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupTableViewController.swift; sourceTree = "<group>"; };
 		7995B1A5276A1F680018108C /* ForgotTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotTableViewController.swift; sourceTree = "<group>"; };
 		79C743B9276B731600492727 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		79C743BB276B846E00492727 /* CustomField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomField.swift; sourceTree = "<group>"; };
 		8792EFDF8C52521A8E427E49 /* Pods-UIDesign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIDesign.debug.xcconfig"; path = "Target Support Files/Pods-UIDesign/Pods-UIDesign.debug.xcconfig"; sourceTree = "<group>"; };
 		970C30F73EF52C0F35EE731A /* Pods_UIDesignTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIDesignTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B12C77EDFB869E4CBDBE69B8 /* Pods_UIDesign_UIDesignUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIDesign_UIDesignUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,8 +131,6 @@
 				79C743B6276B380000492727 /* Model */,
 				7995B1712769EC640018108C /* AppDelegate.swift */,
 				7995B1732769EC640018108C /* SceneDelegate.swift */,
-				7995B1772769EC640018108C /* Main.storyboard */,
-				7995B17C2769EC660018108C /* LaunchScreen.storyboard */,
 				7995B17A2769EC660018108C /* Assets.xcassets */,
 				7995B17F2769EC660018108C /* Info.plist */,
 			);
@@ -165,10 +165,8 @@
 		79C743B7276B380800492727 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7995B1752769EC640018108C /* ViewController.swift */,
-				7995B1A12769ED2D0018108C /* LoginTableViewController.swift */,
-				7995B1A3276A182A0018108C /* SignupTableViewController.swift */,
-				7995B1A5276A1F680018108C /* ForgotTableViewController.swift */,
+				7995B1772769EC640018108C /* Main.storyboard */,
+				7995B17C2769EC660018108C /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +174,11 @@
 		79C743B8276B381100492727 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7995B1752769EC640018108C /* ViewController.swift */,
+				7995B1A12769ED2D0018108C /* LoginTableViewController.swift */,
+				7995B1A3276A182A0018108C /* SignupTableViewController.swift */,
+				7995B1A5276A1F680018108C /* ForgotTableViewController.swift */,
+				79C743BB276B846E00492727 /* CustomField.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				7995B1762769EC640018108C /* ViewController.swift in Sources */,
 				7995B1A22769ED2D0018108C /* LoginTableViewController.swift in Sources */,
 				7995B1722769EC640018108C /* AppDelegate.swift in Sources */,
+				79C743BC276B846E00492727 /* CustomField.swift in Sources */,
 				79C743BA276B731600492727 /* TableCell.swift in Sources */,
 				7995B1742769EC640018108C /* SceneDelegate.swift in Sources */,
 				7995B1A6276A1F680018108C /* ForgotTableViewController.swift in Sources */,

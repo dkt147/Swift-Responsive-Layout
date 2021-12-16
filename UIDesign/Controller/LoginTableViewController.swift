@@ -33,6 +33,7 @@ class LoginTableViewController: UITableViewController {
         
         do
         {
+            UITextField.appearance().tintColor = .orange
             //let documentDirectory = try FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
             
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -40,6 +41,8 @@ class LoginTableViewController: UITableViewController {
             let fileUrl = documentDirectory.appendingPathComponent("userDB").appendingPathExtension("sqlite3")
             
             self.database = try Connection(fileUrl.path)
+            print("Database created")
+            print(fileUrl)
             
         }
         catch
@@ -70,15 +73,19 @@ class LoginTableViewController: UITableViewController {
         
         
         let email = textField1.text!
-        let pass = textField1.text!
+        let pass = textField2.text!
+        print(email)
+        print(pass)
         let query = self.userTbl.filter(self.email == email)
-        
+        print(query)
         
         do
         {
-            try self.database.pluck(query)
+            let res = try self.database.pluck(query)
             
             print("login success")
+            
+            
             
         }
         catch

@@ -38,7 +38,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZSi-2d-tI9">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZSi-2d-tI9" customClass="CustomField" customModule="UIDesign" customModuleProvider="target">
                                                     <rect key="frame" x="50" y="340" width="314" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="65u-hR-urv"/>
@@ -92,7 +92,7 @@
                                                         </button>
                                                     </subviews>
                                                 </stackView>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CHC-Sm-uzj">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CHC-Sm-uzj" customClass="CustomField" customModule="UIDesign" customModuleProvider="target">
                                                     <rect key="frame" x="50" y="279" width="314" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="oQZ-mZ-2BF"/>
@@ -179,7 +179,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMM-0z-MFj">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMM-0z-MFj" customClass="CustomField" customModule="UIDesign" customModuleProvider="target">
                                                     <rect key="frame" x="50" y="201" width="314" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="JC6-p2-05N"/>
@@ -187,7 +187,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yie-9I-wge">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yie-9I-wge" customClass="CustomField" customModule="UIDesign" customModuleProvider="target">
                                                     <rect key="frame" x="50" y="262" width="314" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="yOl-4E-YJQ"/>
@@ -195,7 +195,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="muw-QZ-Arz">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="muw-QZ-Arz" customClass="CustomField" customModule="UIDesign" customModuleProvider="target">
                                                     <rect key="frame" x="50" y="323" width="314" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="h05-zM-qhs"/>
@@ -203,7 +203,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Department" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lbc-A4-9bW">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Department" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lbc-A4-9bW" customClass="CustomField" customModule="UIDesign" customModuleProvider="target">
                                                     <rect key="frame" x="50" y="384" width="314" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="dq0-YH-HLI"/>
@@ -322,7 +322,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEk-3X-Gie">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEk-3X-Gie" customClass="CustomField" customModule="UIDesign" customModuleProvider="target">
                                                     <rect key="frame" x="50" y="258" width="314" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="het-wF-gk7"/>
@@ -413,8 +413,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HDp-fA-3Wv"/>
-        <segue reference="GTa-Ck-Lfg"/>
+        <segue reference="jtO-mV-Ami"/>
+        <segue reference="5Te-R6-KRE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="520" height="224"/>

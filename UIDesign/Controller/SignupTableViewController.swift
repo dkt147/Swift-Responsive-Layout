@@ -29,6 +29,7 @@ class SignupTableViewController: UITableViewController {
         
         do
         {
+            UITextField.appearance().tintColor = .orange
                 //let documentDirectory = try FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
             
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)

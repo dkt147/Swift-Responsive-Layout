@@ -11,6 +11,7 @@ class ForgotTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UITextField.appearance().tintColor = .orange
     }
         override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return UIScreen.main.bounds.height
