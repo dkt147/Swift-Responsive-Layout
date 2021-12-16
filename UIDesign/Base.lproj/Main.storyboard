@@ -219,6 +219,7 @@
                                                         <color key="baseBackgroundColor" red="0.89384549859999995" green="0.43738728760000001" blue="0.19021227960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </buttonConfiguration>
                                                     <connections>
+                                                        <action selector="SignupTap:" destination="LIN-Yb-b2e" eventType="touchUpInside" id="evx-no-mpc"/>
                                                         <segue destination="Y3T-5u-ari" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="HDp-fA-3Wv"/>
                                                     </connections>
                                                 </button>
@@ -279,6 +280,12 @@
                             <outlet property="delegate" destination="LIN-Yb-b2e" id="Q9k-8P-tAu"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="textField1" destination="TMM-0z-MFj" id="jWX-RO-Se4"/>
+                        <outlet property="textField2" destination="yie-9I-wge" id="IbI-qu-op8"/>
+                        <outlet property="textField3" destination="muw-QZ-Arz" id="bSX-GW-E9i"/>
+                        <outlet property="textField4" destination="Lbc-A4-9bW" id="cq9-wO-Fmj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tat-KT-GbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
