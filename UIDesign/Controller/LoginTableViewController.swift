@@ -80,12 +80,12 @@ class LoginTableViewController: UITableViewController {
         print(email)
         print(pass)
         let query = self.userTbl.filter(self.pass == pass)
-        print(query)
+        //print(query)
         
         
             //let res = try self.database.pluck(query)
             let res = userTbl.select(email)   // WHERE "name" IS NOT NULL
-            
+            //print res of query
             print(res)
             
             
