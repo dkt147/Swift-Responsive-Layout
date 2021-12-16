@@ -11,6 +11,8 @@ import UIKit
 class CustomField: UITextField{
     
    
+    //Just add simple bottom line of gray
+    
     func setup() {
         let border = CALayer()
         let width = CGFloat(1.0)
@@ -19,6 +21,7 @@ class CustomField: UITextField{
     border.borderWidth = width
     self.layer.addSublayer(border)
     self.layer.masksToBounds = true
+        
         
 }
 
