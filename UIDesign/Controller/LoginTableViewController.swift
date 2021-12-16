@@ -13,6 +13,9 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var textField1:UITextField!
     @IBOutlet weak var textField2:UITextField!
     
+    @IBOutlet weak var lbl1:UILabel!
+    @IBOutlet weak var lbl2:UILabel!
+    
     
     @IBOutlet weak var mytable: UITableView!
     var userlist = [UserTable]()
@@ -76,22 +79,18 @@ class LoginTableViewController: UITableViewController {
         let pass = textField2.text!
         print(email)
         print(pass)
-        let query = self.userTbl.filter(self.email == email)
+        let query = self.userTbl.filter(self.pass == pass)
         print(query)
         
-        do
-        {
-            let res = try self.database.pluck(query)
+        
+            //let res = try self.database.pluck(query)
+            let res = userTbl.select(email)   // WHERE "name" IS NOT NULL
             
-            print("login success")
+            print(res)
             
             
-            
-        }
-        catch
-        {
-            print("No Record Found")
-        }
+           
+        
         
     }
 }

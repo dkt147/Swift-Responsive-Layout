@@ -23,6 +23,7 @@ class CustomField: UITextField{
     self.layer.masksToBounds = true
         
         
+        
 }
 
 override init(frame: CGRect) {
