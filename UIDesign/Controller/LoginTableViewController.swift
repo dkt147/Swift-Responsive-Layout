@@ -86,10 +86,10 @@ class LoginTableViewController: UITableViewController {
             //let id = Int(idTxt.text!)
         //let query = self.empTbl.filter(self.id == id!)
         
-        let email = textField1.text!
-        let pass = textField2.text!
-        
+        let pass = textField1.text!
         let query = self.userTbl.filter(self.pass == pass)
+        
+        //let query = self.userTbl.filter(self.id != nil)
         
         do
         {
@@ -97,7 +97,7 @@ class LoginTableViewController: UITableViewController {
             
             do
             {
-                nameTxt.text = try user?.get(self.email)
+                nameTxt.text = try user?.get(self.pass)
             }
             catch{
                 print("Data not found")
@@ -106,6 +106,7 @@ class LoginTableViewController: UITableViewController {
         }
         catch
         {
+            print(error.localizedDescription)
             print("No Record Found")
         }
         
