@@ -15,6 +15,12 @@ class SignupTableViewController: UITableViewController {
     @IBOutlet weak var textField3:UITextField!
     @IBOutlet weak var textField4:UITextField!
     
+    
+    @IBOutlet weak var validate1:UILabel!
+    @IBOutlet weak var validate2:UILabel!
+    @IBOutlet weak var validate3:UILabel!
+    @IBOutlet weak var validate4:UILabel!
+    
     var database: Connection!
     
     let userTbl = Table("users")
@@ -26,6 +32,11 @@ class SignupTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        validate1.isHidden = true
+        validate2.isHidden = true
+        validate3.isHidden = true
+        validate4.isHidden = true
         
         do
         {
@@ -85,6 +96,51 @@ class SignupTableViewController: UITableViewController {
     
     
     @IBAction func SignupTap(_ sender: Any) {
+        
+        validate1.isHidden = true
+        validate2.isHidden = true
+        validate3.isHidden = true
+        validate4.isHidden = true
+        
+        guard let name = textField1.text, textField1.text?.count != 0
+        else{
+            validate1.isHidden = false
+            validate1.text = "Please enter your name"
+            return
+        }
+        let email_validate = textField2.text
+        guard let email = textField2.text, textField2.text?.count != 0
+        
+        else{
+            validate2.isHidden = false
+            validate2.text = "Please enter your email"
+            
+            return
+        }
+        
+        
+        guard let pass = textField3.text, textField3.text?.count != 0
+        else{
+            validate3.isHidden = false
+            validate3.text = "Please enter your password"
+            return
+        }
+        guard let depart = textField4.text, textField4.text?.count != 0
+        else{
+            validate4.isHidden = false
+            validate4.text = "Please enter your department"
+            return
+        }
+        
+        
+        //func isValidEmail(email:String) -> Bool
+       // {
+         //   let email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+         //   let emailTest = NSPredicate(format: "SELF MATCHES %@", email)
+         //   return emailTest.evaluate(with: email)
+       // }
+        
+        
         let insertEmp = self.userTbl.insert(self.name <- textField1.text!, self.email <- textField2.text!, self.pass <- textField3.text!,self.depart <- textField4.text!)
         print(insertEmp)
         do
@@ -95,7 +151,10 @@ class SignupTableViewController: UITableViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             
-            print("Ok")
+            textField1.text = ""
+            textField2.text = ""
+            textField3.text = ""
+            textField4.text = ""
             
         }
         catch
