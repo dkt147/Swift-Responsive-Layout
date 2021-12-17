@@ -13,8 +13,8 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var textField1:UITextField!
     @IBOutlet weak var textField2:UITextField!
     
-    @IBOutlet weak var lbl1:UILabel!
-    @IBOutlet weak var lbl2:UILabel!
+    @IBOutlet weak var nameTxt:UILabel!
+    @IBOutlet weak var emTxt:UILabel!
     
     
     @IBOutlet weak var mytable: UITableView!
@@ -75,18 +75,40 @@ class LoginTableViewController: UITableViewController {
     @IBAction func loginTap(_ sender: Any) {
         
         
-        let email = textField1.text!
-        let pass = textField2.text!
-        print(email)
-        print(pass)
-        let query = self.userTbl.filter(self.pass == pass)
+        //let email = textField1.text!
+        //let pass = textField2.text!
+        //print(email)
+        //print(pass)
+        //let query = self.userTbl.filter(self.pass == pass)
         //print(query)
         
         
-            //let res = try self.database.pluck(query)
-            let res = userTbl.select(email)   // WHERE "name" IS NOT NULL
-            //print res of query
-            print(res)
+            //let id = Int(idTxt.text!)
+        //let query = self.empTbl.filter(self.id == id!)
+        
+        let email = textField1.text!
+        let pass = textField2.text!
+        
+        let query = self.userTbl.filter(self.pass == pass)
+        
+        do
+        {
+            let user = try self.database.pluck(query)
+            
+            do
+            {
+                nameTxt.text = try user?.get(self.email)
+            }
+            catch{
+                print("Data not found")
+            }
+            
+        }
+        catch
+        {
+            print("No Record Found")
+        }
+        
             
             
            

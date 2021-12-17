@@ -100,6 +100,20 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDI-8q-JA3">
+                                                    <rect key="frame" x="85" y="578" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WB-ht-SUG">
+                                                    <rect key="frame" x="284" y="578" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NUl-Rq-xhj" firstAttribute="leading" secondItem="Ipf-SW-57M" secondAttribute="leading" id="2Wf-EG-txd"/>
@@ -140,6 +154,8 @@
                     <navigationItem key="navigationItem" id="1Oj-q0-aa0"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="emTxt" destination="5WB-ht-SUG" id="XJD-bF-75u"/>
+                        <outlet property="nameTxt" destination="gDI-8q-JA3" id="cVx-Fm-FsE"/>
                         <outlet property="textField1" destination="CHC-Sm-uzj" id="r6r-Ut-2IE"/>
                         <outlet property="textField2" destination="ZSi-2d-tI9" id="hFW-WX-oCv"/>
                     </connections>
