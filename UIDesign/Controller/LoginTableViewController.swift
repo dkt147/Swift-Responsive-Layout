@@ -10,18 +10,23 @@ import SQLite
 
 class LoginTableViewController: UITableViewController {
 
+    //Initializing outlets of textfields
     @IBOutlet weak var textField1:UITextField!
     @IBOutlet weak var textField2:UITextField!
     
-    
+    //Initializing outlets of Labels
     @IBOutlet weak var validate1:UILabel!
     @IBOutlet weak var validate2:UILabel!
     
-    
+    //Setting table values in a variable
     @IBOutlet weak var mytable: UITableView!
     var userlist = [UserTable]()
     
+    
+    //Initializing database connection
     var database: Connection!
+    
+    //Initializing attributes
     let userTbl = Table("userTbl")
     let id = Expression<Int>("id")
     let name = Expression<String>("name")
@@ -35,20 +40,26 @@ class LoginTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Hide validation labels
         validate1.isHidden = true
         validate2.isHidden = true
         
         do
         {
+            //changing cursor color from black to orange
             UITextField.appearance().tintColor = .orange
-            //let documentDirectory = try FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
             
+            //Setting database url
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             
+            //Setting path to create database file
             let fileUrl = documentDirectory.appendingPathComponent("userDB").appendingPathExtension("sqlite3")
             
+            //checking the file is present or not
             self.database = try Connection(fileUrl.path)
             print("Database created")
+            
+            //database file url to check manually
             print(fileUrl)
             
         }
@@ -62,10 +73,14 @@ class LoginTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        //Matching table cell and screen height to fit in every screen
         return UIScreen.main.bounds.height
     }
     override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
+        
+        //setting table frame to fit in a screen
             let tableViewHeight = self.tableView.frame.height
             let contentHeight = self.tableView.contentSize.height
             
@@ -76,23 +91,15 @@ class LoginTableViewController: UITableViewController {
         }
 
     
+    //This method is for login button, it is called when tapped
     @IBAction func loginTap(_ sender: Any) {
         
         
-        //let email = textField1.text!
-        //let pass = textField2.text!
-        //print(email)
-        //print(pass)
-        //let query = self.userTbl.filter(self.pass == pass)
-        //print(query)
-        
-        
-            //let id = Int(idTxt.text!)
-        //let query = self.empTbl.filter(self.id == id!)
-        
+        //It is to set true when null validation passes successfully
         validate1.isHidden = true
         validate2.isHidden = true
         
+        //checking whether it is empty or not
         guard let email = textField1.text, textField1.text?.count != 0
         else{
             validate1.isHidden = false
@@ -100,6 +107,7 @@ class LoginTableViewController: UITableViewController {
             return
         }
         
+        //checking whether it is empty or not
         guard let pass = textField2.text, textField2.text?.count != 0
         
         else{
@@ -109,31 +117,18 @@ class LoginTableViewController: UITableViewController {
             return
         }
         
+        
+        //showing demo alert after successfully passses from the validation
         let alert = UIAlertController(title: "Login Info", message: "Login Functionality is not working yet", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
         
+        
+        //setting fields to empty on postback
         textField1.text = ""
         textField2.text = ""
       
-        
-       // let pass = textField1.text!
-        //let query = self.userTbl.filter(self.pass == pass)
-        
-        //let query = self.userTbl.filter(self.id != nil)
-        
-        do
-        {
-            //let user = try self.database.pluck(query)
-            
-           
-            
-        }
-        catch
-        {
-            print(error.localizedDescription)
-            print("No Record Found")
-        }
+       
         
             
             
