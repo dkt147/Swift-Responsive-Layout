@@ -1,9 +1,3 @@
-//
-//  SignupTableViewController.swift
-//  UIDesign
-//
-//  Created by JOEYCO-0072PK on 15/12/2021.
-//
 
 import UIKit
 import SQLite
