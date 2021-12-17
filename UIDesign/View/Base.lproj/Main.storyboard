@@ -100,11 +100,24 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tte-hB-556">
+                                                    <rect key="frame" x="50" y="320" width="26.5" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANO-oX-3Zz">
+                                                    <rect key="frame" x="50" y="381" width="26.5" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NUl-Rq-xhj" firstAttribute="leading" secondItem="Ipf-SW-57M" secondAttribute="leading" id="2Wf-EG-txd"/>
                                                 <constraint firstItem="CHC-Sm-uzj" firstAttribute="leading" secondItem="Ipf-SW-57M" secondAttribute="leading" id="3wj-dU-d6B"/>
                                                 <constraint firstItem="ZSi-2d-tI9" firstAttribute="trailing" secondItem="CHC-Sm-uzj" secondAttribute="trailing" id="6LW-K8-5Mv"/>
+                                                <constraint firstItem="tte-hB-556" firstAttribute="leading" secondItem="CHC-Sm-uzj" secondAttribute="leading" id="7ej-2I-lKF"/>
                                                 <constraint firstItem="I9p-B1-SDq" firstAttribute="leading" secondItem="Ipf-SW-57M" secondAttribute="leading" id="AeQ-FN-1Wc"/>
                                                 <constraint firstItem="XSV-f7-aVh" firstAttribute="centerX" secondItem="DZi-N4-hFD" secondAttribute="centerX" id="DAR-ye-uMk"/>
                                                 <constraint firstItem="Qmb-Ul-R1g" firstAttribute="centerX" secondItem="DZi-N4-hFD" secondAttribute="centerX" id="GJd-H0-Sq4"/>
@@ -122,10 +135,13 @@
                                                 <constraint firstItem="NUl-Rq-xhj" firstAttribute="trailing" secondItem="Ipf-SW-57M" secondAttribute="trailing" id="cDY-93-8aE"/>
                                                 <constraint firstItem="ZSi-2d-tI9" firstAttribute="leading" secondItem="CHC-Sm-uzj" secondAttribute="leading" id="fAE-aT-kB0"/>
                                                 <constraint firstItem="XSV-f7-aVh" firstAttribute="top" secondItem="DZi-N4-hFD" secondAttribute="topMargin" constant="60" id="gwi-5u-1OY"/>
+                                                <constraint firstItem="tte-hB-556" firstAttribute="top" secondItem="CHC-Sm-uzj" secondAttribute="bottom" constant="1" id="iVn-YR-ZTr"/>
+                                                <constraint firstItem="ANO-oX-3Zz" firstAttribute="leading" secondItem="ZSi-2d-tI9" secondAttribute="leading" id="kIx-9j-RXV"/>
                                                 <constraint firstItem="Ipf-SW-57M" firstAttribute="leading" secondItem="DZi-N4-hFD" secondAttribute="leadingMargin" constant="30" id="mi2-Dq-HiJ"/>
                                                 <constraint firstItem="XSV-f7-aVh" firstAttribute="centerX" secondItem="DZi-N4-hFD" secondAttribute="centerX" id="oEg-1F-DKb"/>
                                                 <constraint firstItem="CHC-Sm-uzj" firstAttribute="top" secondItem="Ipf-SW-57M" secondAttribute="bottom" constant="42" id="s1O-xB-q0c"/>
                                                 <constraint firstItem="XSV-f7-aVh" firstAttribute="centerX" secondItem="DZi-N4-hFD" secondAttribute="centerX" id="v0l-ab-dv4"/>
+                                                <constraint firstItem="ANO-oX-3Zz" firstAttribute="top" secondItem="ZSi-2d-tI9" secondAttribute="bottom" constant="1" id="w4r-YI-286"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -142,6 +158,8 @@
                     <connections>
                         <outlet property="textField1" destination="CHC-Sm-uzj" id="r6r-Ut-2IE"/>
                         <outlet property="textField2" destination="ZSi-2d-tI9" id="hFW-WX-oCv"/>
+                        <outlet property="validate1" destination="tte-hB-556" id="hXH-S4-DyJ"/>
+                        <outlet property="validate2" destination="ANO-oX-3Zz" id="Udk-7H-knb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oN5-sp-HKd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -375,6 +393,9 @@
                                                     <buttonConfiguration key="configuration" style="filled" title="Forgot Password" cornerStyle="dynamic">
                                                         <backgroundConfiguration key="background" cornerRadius="30"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="ForgotTap:" destination="Y3T-5u-ari" eventType="touchUpInside" id="W8q-OA-Sst"/>
+                                                    </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFF-jG-J2h">
                                                     <rect key="frame" x="182" y="686.5" width="50" height="50"/>
@@ -396,8 +417,15 @@
                                                         </button>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szv-Jr-UEN">
+                                                    <rect key="frame" x="50" y="299" width="26.5" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Szv-Jr-UEN" firstAttribute="top" secondItem="YEk-3X-Gie" secondAttribute="bottom" constant="1" id="NYI-Fr-xEw"/>
                                                 <constraint firstItem="XuJ-qN-wks" firstAttribute="leading" secondItem="7js-kA-O61" secondAttribute="leading" id="Qf9-e3-5cL"/>
                                                 <constraint firstItem="rFF-jG-J2h" firstAttribute="centerX" secondItem="6kX-wW-KKA" secondAttribute="centerX" id="Z10-bD-uMi"/>
                                                 <constraint firstItem="QLN-5r-2Nl" firstAttribute="centerX" secondItem="6kX-wW-KKA" secondAttribute="centerX" id="biY-Am-GGs"/>
@@ -412,6 +440,7 @@
                                                 <constraint firstItem="XuJ-qN-wks" firstAttribute="top" secondItem="YEk-3X-Gie" secondAttribute="bottom" constant="21" id="sLG-78-2Be"/>
                                                 <constraint firstItem="YEk-3X-Gie" firstAttribute="leading" secondItem="7js-kA-O61" secondAttribute="leading" id="tN0-x5-EUb"/>
                                                 <constraint firstItem="XuJ-qN-wks" firstAttribute="trailing" secondItem="7js-kA-O61" secondAttribute="trailing" id="tPU-Vp-tN3"/>
+                                                <constraint firstItem="Szv-Jr-UEN" firstAttribute="leading" secondItem="YEk-3X-Gie" secondAttribute="leading" id="xDM-0o-kZo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -423,6 +452,10 @@
                             <outlet property="delegate" destination="Y3T-5u-ari" id="Q5L-HQ-LDD"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="textField1" destination="YEk-3X-Gie" id="8ga-0C-me7"/>
+                        <outlet property="validate1" destination="Szv-Jr-UEN" id="Moc-Ct-eud"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfS-pF-ynm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -448,7 +481,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GTa-Ck-Lfg"/>
+        <segue reference="5Te-R6-KRE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="520" height="224"/>

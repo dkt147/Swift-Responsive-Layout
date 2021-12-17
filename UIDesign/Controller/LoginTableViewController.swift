@@ -13,8 +13,9 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var textField1:UITextField!
     @IBOutlet weak var textField2:UITextField!
     
-    @IBOutlet weak var nameTxt:UILabel!
-    @IBOutlet weak var emTxt:UILabel!
+    
+    @IBOutlet weak var validate1:UILabel!
+    @IBOutlet weak var validate2:UILabel!
     
     
     @IBOutlet weak var mytable: UITableView!
@@ -33,6 +34,9 @@ class LoginTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        validate1.isHidden = true
+        validate2.isHidden = true
         
         do
         {
@@ -86,22 +90,43 @@ class LoginTableViewController: UITableViewController {
             //let id = Int(idTxt.text!)
         //let query = self.empTbl.filter(self.id == id!)
         
-        let pass = textField1.text!
-        let query = self.userTbl.filter(self.pass == pass)
+        validate1.isHidden = true
+        validate2.isHidden = true
+        
+        guard let email = textField1.text, textField1.text?.count != 0
+        else{
+            validate1.isHidden = false
+            validate1.text = "Please enter your email"
+            return
+        }
+        
+        guard let pass = textField2.text, textField2.text?.count != 0
+        
+        else{
+            validate2.isHidden = false
+            validate2.text = "Please enter your password"
+            
+            return
+        }
+        
+        let alert = UIAlertController(title: "Login Info", message: "Login Functionality is not working yet", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+        
+        textField1.text = ""
+        textField2.text = ""
+      
+        
+       // let pass = textField1.text!
+        //let query = self.userTbl.filter(self.pass == pass)
         
         //let query = self.userTbl.filter(self.id != nil)
         
         do
         {
-            let user = try self.database.pluck(query)
+            //let user = try self.database.pluck(query)
             
-            do
-            {
-                nameTxt.text = try user?.get(self.pass)
-            }
-            catch{
-                print("Data not found")
-            }
+           
             
         }
         catch

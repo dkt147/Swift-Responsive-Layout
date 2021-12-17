@@ -108,7 +108,7 @@ class SignupTableViewController: UITableViewController {
             validate1.text = "Please enter your name"
             return
         }
-        let email_validate = textField2.text
+        
         guard let email = textField2.text, textField2.text?.count != 0
         
         else{
